@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert GPT text</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html-docx-js/dist/html-docx.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="editor-wrapper">
+            <div class="panels">
+                <div class="input-panel">
+                    <textarea id="markdown-input" placeholder="Введите скопированный текст из чата с GPT..."></textarea>
+                </div>
+                <div class="preview-panel">
+                    <div class="preview" id="preview"></div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <button class="button" onclick="copyFormatted()">📋 Копировать</button>
+                <button class="button" onclick="exportFile('txt')">📄 TXT</button>
+                <button class="button" onclick="exportFile('docx')">📑 DOCX</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
